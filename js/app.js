@@ -25,7 +25,13 @@ app.controller("calcController", ['$scope', function($scope) {
 		}
 	}
 	$scope.setOperator = function(value) {
-		$scope.operator = value;
+		if($scope.operator == null) {
+			$scope.operator = value;
+		} else {
+			$scope.compute();
+			$scope.operator = value;
+		}
+		
 	}
 	$scope.compute = function() {
 		if ($scope.num1 != null && $scope.num2 != null && $scope.operator != null) {

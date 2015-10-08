@@ -11,10 +11,11 @@
 		<div id="page-wrapper" ng-controller="calcController">
 			<div id="display-wrapper">
 				<p id="display"> 
-					<span> {{num1}} </span>  
+
+					<span ng-model="num1"> {{num1}} </span>  
 					<span ng-if="operator != '' && operator != 'square'"> {{operator}} </span> 
 					<span ng-if="operator != '' && operator == 'square'"> <sup>2</sup> </span>
-					<span> {{num2}}  </span> 
+					<span ng-model="num2"> {{num2}}  </span> 
 				</p>
 			</div>
 			<section>
